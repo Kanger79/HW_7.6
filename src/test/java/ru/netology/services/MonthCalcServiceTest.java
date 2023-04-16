@@ -3,16 +3,18 @@ package ru.netology.services;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 // import ru.netology.services.MonthCalcService;
 
 public class MonthCalcServiceTest {
 
     @ParameterizedTest
-    @CsvSource({
-            "10000, 3000, 20000, 3",
-            "100000, 60000, 150000, 2"
-    })
+    @CsvFileSource (files = "src/test/resources/parameters.csv")
+//    @CsvSource({
+//            "10000, 3000, 20000, 3",
+//            "100000, 60000, 150000, 2"
+//    })
     void exampleOne(int income, int expenses, int threshold, int expected) {
         MonthCalcService service = new MonthCalcService();
         // входные данные:
@@ -29,7 +31,7 @@ public class MonthCalcServiceTest {
 //    @Test
 //    void exampleTwo() {
 //        MonthCalcService service = new MonthCalcService();
-        // входные данные:
+    // входные данные:
 //        int income = 100_000;
 //       int expenses = 60_000;
 //        int threshold = 150_000;

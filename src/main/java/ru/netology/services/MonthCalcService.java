@@ -1,7 +1,7 @@
 package ru.netology.services;
 
 public class MonthCalcService {
-      public int calculate(int income, int expenses, int threshold) {
+    public int calculate(int income, int expenses, int threshold) {
         int count = 0; // счётчик месяцев отдыха
         int money = 0; // количество денег на счету
         int restPay = 0; //затраты на отдых
@@ -13,11 +13,12 @@ public class MonthCalcService {
                 money = (money - expenses) / 3;
 
             } else {
-                System.out.println("Месяц " + (month) + ". Денег " + money + ". Придётся поработать. Заработал +" + income +", потратил -" + expenses );
+                System.out.println("Месяц " + (month) + ". Денег " + money + ". Придётся поработать. Заработал +" + income + ", потратил -" + expenses);
                 money = money - expenses + income;
 
             }
         }
+        System.out.println("Итого, за год, можно отдохнуть " + count + " раза (месяца)");
         return count;
     }
 }

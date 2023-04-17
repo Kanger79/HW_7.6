@@ -6,9 +6,9 @@ public class Main {
     public static void main(String[] args) {
         MonthCalcService service = new MonthCalcService();
 
-        int income = 10_000;
-        int expenses = 3_000;
-        int threshold = 20_000;
+        int income = 50_000;
+        int expenses = 15_000;
+        int threshold = 120_000;
         System.out.println("Входные параметры:");
         System.out.println("Доход = " + income);
         System.out.println("Обязательные расходы = " + expenses);

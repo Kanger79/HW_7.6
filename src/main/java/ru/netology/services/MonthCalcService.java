@@ -19,6 +19,7 @@ public class MonthCalcService {
             }
         }
         System.out.println("Итого, за год, можно отдохнуть " + count + " раза (месяца)");
+        System.out.println();
         return count;
     }
 }
